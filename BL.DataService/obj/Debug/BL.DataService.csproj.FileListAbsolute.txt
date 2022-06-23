@@ -1,0 +1,12 @@
+C:\Users\kapun\source\repos\BL.UI\BL.DataService\bin\Debug\BL.DataService.dll.config
+C:\Users\kapun\source\repos\BL.UI\BL.DataService\bin\Debug\BL.DataService.dll
+C:\Users\kapun\source\repos\BL.UI\BL.DataService\bin\Debug\BL.DataService.pdb
+C:\Users\kapun\source\repos\BL.UI\BL.DataService\bin\Debug\EntityFramework.dll
+C:\Users\kapun\source\repos\BL.UI\BL.DataService\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kapun\source\repos\BL.UI\BL.DataService\bin\Debug\EntityFramework.xml
+C:\Users\kapun\source\repos\BL.UI\BL.DataService\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kapun\source\repos\BL.UI\BL.DataService\obj\Debug\BL.DataService.csproj.AssemblyReference.cache
+C:\Users\kapun\source\repos\BL.UI\BL.DataService\obj\Debug\BL.DataService.csproj.CoreCompileInputs.cache
+C:\Users\kapun\source\repos\BL.UI\BL.DataService\obj\Debug\BL.DataService.csproj.CopyComplete
+C:\Users\kapun\source\repos\BL.UI\BL.DataService\obj\Debug\BL.DataService.dll
+C:\Users\kapun\source\repos\BL.UI\BL.DataService\obj\Debug\BL.DataService.pdb

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BusinessLoanModelStoreContainer" CdmEntityContainer="BusinessLoanEntities">
+    <EntitySetMapping Name="Documents">
+      <EntityTypeMapping TypeName="BusinessLoanModel.Document">
+        <MappingFragment StoreEntitySet="Documents">
+          <ScalarProperty Name="documentId" ColumnName="documentId" />
+          <ScalarProperty Name="documnetType" ColumnName="documnetType" />
+          <ScalarProperty Name="documnetUpload" ColumnName="documnetUpload" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoanApplicants">
+      <EntityTypeMapping TypeName="BusinessLoanModel.LoanApplicant">
+        <MappingFragment StoreEntitySet="LoanApplicant">
+          <ScalarProperty Name="loanId" ColumnName="loanId" />
+          <ScalarProperty Name="loanType" ColumnName="loanType" />
+          <ScalarProperty Name="loanAccountRequired" ColumnName="loanAccountRequired" />
+          <ScalarProperty Name="applicantName" ColumnName="applicantName" />
+          <ScalarProperty Name="applicantAdderss" ColumnName="applicantAdderss" />
+          <ScalarProperty Name="applicantMobile" ColumnName="applicantMobile" />
+          <ScalarProperty Name="applicantAadhar" ColumnName="applicantAadhar" />
+          <ScalarProperty Name="applicantPan" ColumnName="applicantPan" />
+          <ScalarProperty Name="applicantSalary" ColumnName="applicantSalary" />
+          <ScalarProperty Name="loanRepaymentMethod" ColumnName="loanRepaymentMethod" />
+          <ScalarProperty Name="loanRepaymentMonths" ColumnName="loanRepaymentMonths" />
+          <ScalarProperty Name="timestampOfLoan" ColumnName="timestampOfLoan" />
+          <ScalarProperty Name="documentId" ColumnName="documentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logins">
+      <EntityTypeMapping TypeName="BusinessLoanModel.Login">
+        <MappingFragment StoreEntitySet="Login">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reviews">
+      <EntityTypeMapping TypeName="BusinessLoanModel.Review">
+        <MappingFragment StoreEntitySet="Review">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="BusinessLoanModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="mobileNumber" ColumnName="mobileNumber" />
+          <ScalarProperty Name="userRole" ColumnName="userRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

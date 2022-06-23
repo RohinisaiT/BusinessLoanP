@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BusinessLoanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BusinessLoan.dbo.Documents' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Documents">
+          <Key>
+            <PropertyRef Name="documentId" />
+            <PropertyRef Name="documnetType" />
+            <PropertyRef Name="documnetUpload" />
+          </Key>
+          <Property Name="documentId" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="documnetType" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="documnetUpload" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BusinessLoan.dbo.LoanApplicant' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="LoanApplicant">
+          <Key>
+            <PropertyRef Name="loanId" />
+            <PropertyRef Name="loanType" />
+            <PropertyRef Name="loanAccountRequired" />
+            <PropertyRef Name="applicantName" />
+            <PropertyRef Name="applicantAdderss" />
+            <PropertyRef Name="applicantMobile" />
+            <PropertyRef Name="applicantAadhar" />
+            <PropertyRef Name="applicantPan" />
+            <PropertyRef Name="applicantSalary" />
+            <PropertyRef Name="loanRepaymentMethod" />
+            <PropertyRef Name="loanRepaymentMonths" />
+            <PropertyRef Name="timestampOfLoan" />
+            <PropertyRef Name="documentId" />
+          </Key>
+          <Property Name="loanId" Type="int" Nullable="false" />
+          <Property Name="loanType" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="loanAccountRequired" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="applicantName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="applicantAdderss" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="applicantMobile" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="applicantAadhar" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="applicantPan" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="applicantSalary" Type="int" Nullable="false" />
+          <Property Name="loanRepaymentMethod" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="loanRepaymentMonths" Type="int" Nullable="false" />
+          <Property Name="timestampOfLoan" Type="date" Nullable="false" />
+          <Property Name="documentId" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BusinessLoan.dbo.Login' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="email" />
+            <PropertyRef Name="password" />
+          </Key>
+          <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BusinessLoan.dbo.Review' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Review">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Email" />
+            <PropertyRef Name="Message" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Message" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BusinessLoan.dbo.User' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Userid" />
+            <PropertyRef Name="Email" />
+            <PropertyRef Name="Password" />
+            <PropertyRef Name="username" />
+            <PropertyRef Name="mobileNumber" />
+            <PropertyRef Name="userRole" />
+          </Key>
+          <Property Name="Userid" Type="int" Nullable="false" />
+          <Property Name="Email" Type="varbinary" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="mobileNumber" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="userRole" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="BusinessLoanModelStoreContainer">
+          <EntitySet Name="Documents" EntityType="Self.Documents" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Documents].[documentId] AS [documentId], 
+    [Documents].[documnetType] AS [documnetType], 
+    [Documents].[documnetUpload] AS [documnetUpload]
+    FROM [dbo].[Documents] AS [Documents]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="LoanApplicant" EntityType="Self.LoanApplicant" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [LoanApplicant].[loanId] AS [loanId], 
+    [LoanApplicant].[loanType] AS [loanType], 
+    [LoanApplicant].[loanAccountRequired] AS [loanAccountRequired], 
+    [LoanApplicant].[applicantName] AS [applicantName], 
+    [LoanApplicant].[applicantAdderss] AS [applicantAdderss], 
+    [LoanApplicant].[applicantMobile] AS [applicantMobile], 
+    [LoanApplicant].[applicantAadhar] AS [applicantAadhar], 
+    [LoanApplicant].[applicantPan] AS [applicantPan], 
+    [LoanApplicant].[applicantSalary] AS [applicantSalary], 
+    [LoanApplicant].[loanRepaymentMethod] AS [loanRepaymentMethod], 
+    [LoanApplicant].[loanRepaymentMonths] AS [loanRepaymentMonths], 
+    [LoanApplicant].[timestampOfLoan] AS [timestampOfLoan], 
+    [LoanApplicant].[documentId] AS [documentId]
+    FROM [dbo].[LoanApplicant] AS [LoanApplicant]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Login" EntityType="Self.Login" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Login].[email] AS [email], 
+    [Login].[password] AS [password]
+    FROM [dbo].[Login] AS [Login]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Review" EntityType="Self.Review" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Review].[id] AS [id], 
+    [Review].[Name] AS [Name], 
+    [Review].[Email] AS [Email], 
+    [Review].[Message] AS [Message]
+    FROM [dbo].[Review] AS [Review]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="User" EntityType="Self.User" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [User].[Userid] AS [Userid], 
+    [User].[Email] AS [Email], 
+    [User].[Password] AS [Password], 
+    [User].[username] AS [username], 
+    [User].[mobileNumber] AS [mobileNumber], 
+    [User].[userRole] AS [userRole]
+    FROM [dbo].[User] AS [User]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BusinessLoanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Document">
+          <Key>
+            <PropertyRef Name="documentId" />
+            <PropertyRef Name="documnetType" />
+            <PropertyRef Name="documnetUpload" />
+          </Key>
+          <Property Name="documentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="documnetType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="documnetUpload" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LoanApplicant">
+          <Key>
+            <PropertyRef Name="loanId" />
+            <PropertyRef Name="loanType" />
+            <PropertyRef Name="loanAccountRequired" />
+            <PropertyRef Name="applicantName" />
+            <PropertyRef Name="applicantAdderss" />
+            <PropertyRef Name="applicantMobile" />
+            <PropertyRef Name="applicantAadhar" />
+            <PropertyRef Name="applicantPan" />
+            <PropertyRef Name="applicantSalary" />
+            <PropertyRef Name="loanRepaymentMethod" />
+            <PropertyRef Name="loanRepaymentMonths" />
+            <PropertyRef Name="timestampOfLoan" />
+            <PropertyRef Name="documentId" />
+          </Key>
+          <Property Name="loanId" Type="Int32" Nullable="false" />
+          <Property Name="loanType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="loanAccountRequired" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="applicantName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="applicantAdderss" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="applicantMobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="applicantAadhar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="applicantPan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="applicantSalary" Type="Int32" Nullable="false" />
+          <Property Name="loanRepaymentMethod" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="loanRepaymentMonths" Type="Int32" Nullable="false" />
+          <Property Name="timestampOfLoan" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="documentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="email" />
+            <PropertyRef Name="password" />
+          </Key>
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Review">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Email" />
+            <PropertyRef Name="Message" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Userid" />
+            <PropertyRef Name="Email" />
+            <PropertyRef Name="Password" />
+            <PropertyRef Name="username" />
+            <PropertyRef Name="mobileNumber" />
+            <PropertyRef Name="userRole" />
+          </Key>
+          <Property Name="Userid" Type="Int32" Nullable="false" />
+          <Property Name="Email" Type="Binary" MaxLength="50" FixedLength="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="mobileNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="userRole" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="BusinessLoanEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Documents" EntityType="Self.Document" />
+          <EntitySet Name="LoanApplicants" EntityType="Self.LoanApplicant" />
+          <EntitySet Name="Logins" EntityType="Self.Login" />
+          <EntitySet Name="Reviews" EntityType="Self.Review" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BusinessLoanModelStoreContainer" CdmEntityContainer="BusinessLoanEntities">
+          <EntitySetMapping Name="Documents">
+            <EntityTypeMapping TypeName="BusinessLoanModel.Document">
+              <MappingFragment StoreEntitySet="Documents">
+                <ScalarProperty Name="documentId" ColumnName="documentId" />
+                <ScalarProperty Name="documnetType" ColumnName="documnetType" />
+                <ScalarProperty Name="documnetUpload" ColumnName="documnetUpload" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoanApplicants">
+            <EntityTypeMapping TypeName="BusinessLoanModel.LoanApplicant">
+              <MappingFragment StoreEntitySet="LoanApplicant">
+                <ScalarProperty Name="loanId" ColumnName="loanId" />
+                <ScalarProperty Name="loanType" ColumnName="loanType" />
+                <ScalarProperty Name="loanAccountRequired" ColumnName="loanAccountRequired" />
+                <ScalarProperty Name="applicantName" ColumnName="applicantName" />
+                <ScalarProperty Name="applicantAdderss" ColumnName="applicantAdderss" />
+                <ScalarProperty Name="applicantMobile" ColumnName="applicantMobile" />
+                <ScalarProperty Name="applicantAadhar" ColumnName="applicantAadhar" />
+                <ScalarProperty Name="applicantPan" ColumnName="applicantPan" />
+                <ScalarProperty Name="applicantSalary" ColumnName="applicantSalary" />
+                <ScalarProperty Name="loanRepaymentMethod" ColumnName="loanRepaymentMethod" />
+                <ScalarProperty Name="loanRepaymentMonths" ColumnName="loanRepaymentMonths" />
+                <ScalarProperty Name="timestampOfLoan" ColumnName="timestampOfLoan" />
+                <ScalarProperty Name="documentId" ColumnName="documentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logins">
+            <EntityTypeMapping TypeName="BusinessLoanModel.Login">
+              <MappingFragment StoreEntitySet="Login">
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reviews">
+            <EntityTypeMapping TypeName="BusinessLoanModel.Review">
+              <MappingFragment StoreEntitySet="Review">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="BusinessLoanModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="Userid" ColumnName="Userid" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="mobileNumber" ColumnName="mobileNumber" />
+                <ScalarProperty Name="userRole" ColumnName="userRole" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
