@@ -14,8 +14,17 @@ namespace BL.DataService
     
     public partial class Document
     {
-        public string documentId { get; set; }
-        public string documnetType { get; set; }
-        public string documnetUpload { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Document()
+        {
+            this.LoanApplicants = new HashSet<LoanApplicant>();
+        }
+    
+        public int documentId { get; set; }
+        public string documentType { get; set; }
+        public byte[] documentUpload { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<LoanApplicant> LoanApplicants { get; set; }
     }
 }

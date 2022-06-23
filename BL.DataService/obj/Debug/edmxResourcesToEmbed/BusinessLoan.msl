@@ -3,10 +3,10 @@
   <EntityContainerMapping StorageEntityContainer="BusinessLoanModelStoreContainer" CdmEntityContainer="BusinessLoanEntities">
     <EntitySetMapping Name="Documents">
       <EntityTypeMapping TypeName="BusinessLoanModel.Document">
-        <MappingFragment StoreEntitySet="Documents">
+        <MappingFragment StoreEntitySet="Document">
           <ScalarProperty Name="documentId" ColumnName="documentId" />
-          <ScalarProperty Name="documnetType" ColumnName="documnetType" />
-          <ScalarProperty Name="documnetUpload" ColumnName="documnetUpload" />
+          <ScalarProperty Name="documentType" ColumnName="documentType" />
+          <ScalarProperty Name="documentUpload" ColumnName="documentUpload" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -15,16 +15,17 @@
         <MappingFragment StoreEntitySet="LoanApplicant">
           <ScalarProperty Name="loanId" ColumnName="loanId" />
           <ScalarProperty Name="loanType" ColumnName="loanType" />
-          <ScalarProperty Name="loanAccountRequired" ColumnName="loanAccountRequired" />
+          <ScalarProperty Name="loanAmountRequired" ColumnName="loanAmountRequired" />
           <ScalarProperty Name="applicantName" ColumnName="applicantName" />
-          <ScalarProperty Name="applicantAdderss" ColumnName="applicantAdderss" />
+          <ScalarProperty Name="applicantAddress" ColumnName="applicantAddress" />
           <ScalarProperty Name="applicantMobile" ColumnName="applicantMobile" />
-          <ScalarProperty Name="applicantAadhar" ColumnName="applicantAadhar" />
+          <ScalarProperty Name="applicantEmail" ColumnName="applicantEmail" />
+          <ScalarProperty Name="applicantAadhaar" ColumnName="applicantAadhaar" />
           <ScalarProperty Name="applicantPan" ColumnName="applicantPan" />
           <ScalarProperty Name="applicantSalary" ColumnName="applicantSalary" />
-          <ScalarProperty Name="loanRepaymentMethod" ColumnName="loanRepaymentMethod" />
-          <ScalarProperty Name="loanRepaymentMonths" ColumnName="loanRepaymentMonths" />
-          <ScalarProperty Name="timestampOfLoan" ColumnName="timestampOfLoan" />
+          <ScalarProperty Name="LoanRepaymentMethod" ColumnName="LoanRepaymentMethod" />
+          <ScalarProperty Name="LoanRepaymentMonths" ColumnName="LoanRepaymentMonths" />
+          <ScalarProperty Name="TimestampofLoan" ColumnName="TimestampofLoan" />
           <ScalarProperty Name="documentId" ColumnName="documentId" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -37,22 +38,12 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Reviews">
-      <EntityTypeMapping TypeName="BusinessLoanModel.Review">
-        <MappingFragment StoreEntitySet="Review">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Message" ColumnName="Message" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="BusinessLoanModel.User">
         <MappingFragment StoreEntitySet="User">
-          <ScalarProperty Name="Userid" ColumnName="Userid" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
           <ScalarProperty Name="username" ColumnName="username" />
           <ScalarProperty Name="mobileNumber" ColumnName="mobileNumber" />
           <ScalarProperty Name="userRole" ColumnName="userRole" />

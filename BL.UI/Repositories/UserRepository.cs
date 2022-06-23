@@ -22,13 +22,13 @@ namespace BL.UI.Repositories
             dbEntities.Entry<User>(user).State = System.Data.Entity.EntityState.Modified;
             dbEntities.SaveChanges();
         }
-        public void DeleteUser(string userId)
+        public void DeleteUser(int userId)
         {
             User user = dbEntities.Users.Find(userId);
             dbEntities.Users.Remove(user);
             dbEntities.SaveChanges();
         }
-        public User GetUserById(string userId)
+        public User GetUserById(int userId)
         {
             User user = dbEntities.Users.Find(userId);
             return user;

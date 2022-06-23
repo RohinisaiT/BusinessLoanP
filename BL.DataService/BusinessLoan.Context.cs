@@ -28,7 +28,6 @@ namespace BL.DataService
         public virtual DbSet<Document> Documents { get; set; }
         public virtual DbSet<LoanApplicant> LoanApplicants { get; set; }
         public virtual DbSet<Login> Logins { get; set; }
-        public virtual DbSet<Review> Reviews { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }
 }

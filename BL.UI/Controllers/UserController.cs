@@ -33,17 +33,17 @@ namespace BL.UI.Controllers
             userRepository.addUser(user);
             return RedirectToAction("Index");
         }
-        public ActionResult Details(string userId)
+        public ActionResult Details(int userId)
         {
             User user = userRepository.GetUserById(userId);
             return View(user);
         }
-        public ActionResult Delete(string userId)
+        public ActionResult Delete(int userId)
         {
             userRepository.DeleteUser(userId);
             return RedirectToAction("Index");
         }
-        public ActionResult Edit(string userId)
+        public ActionResult Edit(int userId)
         {
             User user = userRepository.GetUserById(userId);
             return View(user);

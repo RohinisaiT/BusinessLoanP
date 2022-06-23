@@ -16,16 +16,19 @@ namespace BL.DataService
     {
         public int loanId { get; set; }
         public string loanType { get; set; }
-        public string loanAccountRequired { get; set; }
+        public string loanAmountRequired { get; set; }
         public string applicantName { get; set; }
-        public string applicantAdderss { get; set; }
+        public string applicantAddress { get; set; }
         public string applicantMobile { get; set; }
-        public string applicantAadhar { get; set; }
+        public string applicantEmail { get; set; }
+        public string applicantAadhaar { get; set; }
         public string applicantPan { get; set; }
-        public int applicantSalary { get; set; }
-        public string loanRepaymentMethod { get; set; }
-        public int loanRepaymentMonths { get; set; }
-        public System.DateTime timestampOfLoan { get; set; }
-        public string documentId { get; set; }
+        public string applicantSalary { get; set; }
+        public string LoanRepaymentMethod { get; set; }
+        public string LoanRepaymentMonths { get; set; }
+        public string TimestampofLoan { get; set; }
+        public int documentId { get; set; }
+    
+        public virtual Document Document { get; set; }
     }
 }

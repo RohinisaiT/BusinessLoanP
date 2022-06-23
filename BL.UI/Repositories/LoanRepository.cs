@@ -15,19 +15,23 @@ namespace BL.UI.Repositories
         }
         public void ApplyLoan(LoanApplicant data)
         {
-
+            dbEntities.LoanApplicants.Add(data);
+            dbEntities.SaveChanges();
         }
-        public void viewLoan(LoanApplicant data)
+        public List<LoanApplicant> viewLoan()
         {
-
+            return dbEntities.LoanApplicants.ToList();
         }
-        public void editLoan(LoanApplicant loanId)
+        public void editLoan(LoanApplicant loan)
         {
-
+            dbEntities.Entry<LoanApplicant>(loan).State = System.Data.Entity.EntityState.Modified;
+            dbEntities.SaveChanges();
         }
-        public void deleteLoan(LoanApplicant loanId)
+        public void deleteLoan(int loanId)
         {
-
+            User user = dbEntities.Users.Find(loanId);
+            dbEntities.Users.Remove(user);
+            dbEntities.SaveChanges();
         }
     }
         
