@@ -13,22 +13,25 @@ namespace BL.UI.Repositories
         {
             dbEntities = new BusinessLoanEntities();
         }
-        public void addDocuments()
+        public void addDocuments(Document document)
         {
-
-
+            dbEntities.Documents.Add(document);
+            dbEntities.SaveChanges();
         }
-        public void viewDocuments()
+        public void editDocuments(Document document)
         {
-
+            dbEntities.Entry<Document>(document).State = System.Data.Entity.EntityState.Modified;
+            dbEntities.SaveChanges();
         }
-        public void editDocuments(Document documentId)
+        public void deleteDocuments(string documentId)
         {
-
+            Document document = dbEntities.Documents.Find(documentId);
+            dbEntities.Documents.Remove(document);
+            dbEntities.SaveChanges();
         }
-        public void deleteDocuments(Document documentId)
+        public List<Document> viewDocuments()
         {
-
+            return dbEntities.Documents.ToList();
         }
     }
 }

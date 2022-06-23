@@ -8,6 +8,14 @@ namespace BL.UI.Repositories
 {
     public class LoginRepository
     {
-        public 
+        public BusinessLoanEntities dbEntities;
+        public LoginRepository()
+        {
+            dbEntities = new BusinessLoanEntities();
+        }
+        public void validateUser(Login data)
+        {
+
+        }
     }
 }

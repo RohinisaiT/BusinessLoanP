@@ -51,6 +51,9 @@ C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\roslyn\vbc.rsp
 C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\roslyn\VBCSCompiler.exe
 C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\Antlr3.Runtime.dll
+C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\BL.DataService.dll
+C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\EntityFramework.dll
+C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\EntityFramework.SqlServer.dll
 C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\Newtonsoft.Json.dll
@@ -62,6 +65,10 @@ C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\System.Web.WebPages.Deployment.dll
 C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\System.Web.WebPages.dll
 C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\System.Web.WebPages.Razor.dll
 C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\WebGrease.dll
+C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\BL.DataService.pdb
+C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\BL.DataService.dll.config
+C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\EntityFramework.xml
+C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\EntityFramework.SqlServer.xml
 C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\System.Web.Helpers.xml
 C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\System.Web.Mvc.xml
 C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\System.Web.Optimization.xml
@@ -77,10 +84,3 @@ C:\Users\kapun\source\repos\BL.UI\BL.UI\obj\Debug\BL.UI.csproj.CoreCompileInputs
 C:\Users\kapun\source\repos\BL.UI\BL.UI\obj\Debug\BL.UI.csproj.CopyComplete
 C:\Users\kapun\source\repos\BL.UI\BL.UI\obj\Debug\BL.UI.dll
 C:\Users\kapun\source\repos\BL.UI\BL.UI\obj\Debug\BL.UI.pdb
-C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\BL.DataService.dll
-C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\EntityFramework.dll
-C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\EntityFramework.SqlServer.dll
-C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\BL.DataService.pdb
-C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\BL.DataService.dll.config
-C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\EntityFramework.xml
-C:\Users\kapun\source\repos\BL.UI\BL.UI\bin\EntityFramework.SqlServer.xml
