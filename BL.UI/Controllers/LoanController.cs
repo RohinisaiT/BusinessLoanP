@@ -17,25 +17,31 @@ namespace BL.UI.Controllers
         {
             loanRepository = new LoanRepository();
         }
+        [HttpGet]
         public ActionResult getLoan(LoanApplicant loan)
         {
             List<LoanApplicant> loans =loanRepository.viewLoan();
             return View(loans);
         }
+        [HttpPost]
         public ActionResult addLoan(LoanApplicant loan)
         {
             loanRepository.ApplyLoan(loan) ;
             return RedirectToAction("getLoan");
         }
+        [HttpPut]
         public ActionResult editLoan(LoanApplicant data)
         {
             loanRepository.editLoan(data);
             return View(data);
         }
+        [HttpDelete]
         public ActionResult deleteLoan(int loanid)
         {
             loanRepository.deleteLoan(loanid);
             return RedirectToAction("getLoan");
         }
+        
+
     }
 }
