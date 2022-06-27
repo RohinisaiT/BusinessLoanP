@@ -14,7 +14,14 @@ namespace BL.UI.Repositories
         }
         public void addUser(User user)
         {
+            Login login = new Login();
+            login.email = user.email;
+            login.password = user.password;
+
             dbEntities.Users.Add(user);
+            dbEntities.SaveChanges();
+
+            dbEntities.Logins.Add(login);
             dbEntities.SaveChanges();
         }
         public void EditUser(User user)
@@ -24,7 +31,14 @@ namespace BL.UI.Repositories
         }
         public void DeleteUser(int userId)
         {
+
             User user = dbEntities.Users.Find(userId);
+
+            Login login = dbEntities.Logins.Find(user.email);
+
+            dbEntities.Logins.Remove(login);
+            dbEntities.SaveChanges();
+
             dbEntities.Users.Remove(user);
             dbEntities.SaveChanges();
         }

@@ -65,7 +65,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BusinessLoan.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="Document.cs">
       <DependentUpon>BusinessLoan.tt</DependentUpon>
     </Compile>

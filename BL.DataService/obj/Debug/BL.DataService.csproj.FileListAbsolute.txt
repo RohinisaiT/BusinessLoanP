@@ -17,7 +17,6 @@ E:\Projects\vsrepos\BusinessLoan\BL.DataService\bin\Debug\EntityFramework.dll
 E:\Projects\vsrepos\BusinessLoan\BL.DataService\bin\Debug\EntityFramework.SqlServer.dll
 E:\Projects\vsrepos\BusinessLoan\BL.DataService\bin\Debug\EntityFramework.xml
 E:\Projects\vsrepos\BusinessLoan\BL.DataService\bin\Debug\EntityFramework.SqlServer.xml
-E:\Projects\vsrepos\BusinessLoan\BL.DataService\obj\Debug\BL.DataService.csproj.AssemblyReference.cache
 E:\Projects\vsrepos\BusinessLoan\BL.DataService\obj\Debug\BL.DataService.csproj.CoreCompileInputs.cache
 E:\Projects\vsrepos\BusinessLoan\BL.DataService\obj\Debug\BL.DataService.csproj.CopyComplete
 E:\Projects\vsrepos\BusinessLoan\BL.DataService\obj\Debug\BL.DataService.dll

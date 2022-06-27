@@ -28,7 +28,7 @@ namespace BL.DataService
         public string LoanRepaymentMonths { get; set; }
         public string TimestampofLoan { get; set; }
         public int documentId { get; set; }
-    
+
         public virtual Document Document { get; set; }
     }
 }

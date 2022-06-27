@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using BL.DataService;
 using BL.UI.Repositories;
+using System.Web.SessionState;
 
 namespace BL.UI.Controllers
 {
@@ -12,6 +13,7 @@ namespace BL.UI.Controllers
     public class UserController : Controller
     {
         public UserRepository userRepository;
+        BusinessLoanEntities db = new BusinessLoanEntities();
 
         public UserController()
         {
@@ -31,21 +33,22 @@ namespace BL.UI.Controllers
         public ActionResult Create(User user)
         {
             userRepository.addUser(user);
+            Session["userId"] = user.UserId;
             return RedirectToAction("Index");
         }
-        public ActionResult Details(int userId)
+        public ActionResult Details(int id)
         {
-            User user = userRepository.GetUserById(userId);
+            User user = userRepository.GetUserById(id);
             return View(user);
         }
-        public ActionResult Delete(int userId)
+        public ActionResult Delete(int id)
         {
-            userRepository.DeleteUser(userId);
+            userRepository.DeleteUser(id);
             return RedirectToAction("Index");
         }
-        public ActionResult Edit(int userId)
+        public ActionResult Edit(int id)
         {
-            User user = userRepository.GetUserById(userId);
+            User user = userRepository.GetUserById(id);
             return View(user);
         }
         [HttpPost]
@@ -53,6 +56,31 @@ namespace BL.UI.Controllers
         {
             userRepository.EditUser(user);
             return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public ActionResult Login(string email, string password)
+        {
+            Login login = new Login();
+            login.email = email;
+            login.password = password;
+
+            AuthController ac = new AuthController();
+
+            bool isUserPresent = ac.isUserPresent(login);
+
+            if (isUserPresent)
+            {
+                User user = db.Users.SingleOrDefault(x => x.email == email);
+                Session["userId"] = user.UserId;
+                return RedirectToRoute(new { controller = "Loan", action = "getLoans" });
+            }
+            return View();
+        }
+
+        public ActionResult Login()
+        {
+            return View();
         }
     }
 }

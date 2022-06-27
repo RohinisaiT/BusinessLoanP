@@ -17,7 +17,6 @@ namespace BL.UI.Repositories
         {
             dbEntities.LoanApplicants.Add(data);
             dbEntities.SaveChanges();
-            
         }
         public List<LoanApplicant> viewLoan()
         {

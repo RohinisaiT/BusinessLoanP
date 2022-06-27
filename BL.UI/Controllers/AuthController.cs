@@ -20,6 +20,7 @@ namespace BL.UI.Controllers
         {
             dbEntities = new BusinessLoanEntities();
         }
+
         [HttpPost]
         [Route("isUserPresent")]
         public bool isUserPresent(Login login)
