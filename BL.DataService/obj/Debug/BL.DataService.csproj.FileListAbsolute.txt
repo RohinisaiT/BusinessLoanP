@@ -21,3 +21,4 @@ E:\Projects\vsrepos\BusinessLoan\BL.DataService\obj\Debug\BL.DataService.csproj.
 E:\Projects\vsrepos\BusinessLoan\BL.DataService\obj\Debug\BL.DataService.csproj.CopyComplete
 E:\Projects\vsrepos\BusinessLoan\BL.DataService\obj\Debug\BL.DataService.dll
 E:\Projects\vsrepos\BusinessLoan\BL.DataService\obj\Debug\BL.DataService.pdb
+E:\Projects\vsrepos\BusinessLoan\BL.DataService\obj\Debug\BL.DataService.csproj.AssemblyReference.cache

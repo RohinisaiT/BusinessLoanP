@@ -13,8 +13,9 @@ namespace BL.UI.Repositories
         {
             dbEntities = new BusinessLoanEntities();
         }
-        public void ApplyLoan(LoanApplicant data)
+        public void ApplyLoan(LoanApplicant data, Document docs)
         {
+            dbEntities.Documents.Add(docs);
             dbEntities.LoanApplicants.Add(data);
             dbEntities.SaveChanges();
         }

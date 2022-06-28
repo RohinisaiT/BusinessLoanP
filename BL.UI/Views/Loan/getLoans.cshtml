@@ -12,72 +12,71 @@
 </p>
 <table class="table">
     <tr>
-
         <th>
-            @Html.DisplayNameFor(model => model.loanAmountRequired)
+            Name
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.applicantName)
+            Address
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.applicantAddress)
+            Mobile Number
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.applicantMobile)
+            Email ID
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.applicantEmail)
+            Aadhaar Number
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.applicantAadhaar)
+            PAN Number
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.applicantPan)
+            Salary
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.applicantSalary)
+            Amount Required
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LoanRepaymentMonths)
+            Repayment Duration
         </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.loanAmountRequired)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.applicantName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.applicantAddress)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.applicantMobile)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.applicantEmail)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.applicantAadhaar)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.applicantPan)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.applicantSalary)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LoanRepaymentMonths)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.loanId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.loanId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.loanId })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.applicantName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.applicantAddress)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.applicantMobile)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.applicantEmail)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.applicantAadhaar)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.applicantPan)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.applicantSalary)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.loanAmountRequired)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LoanRepaymentMonths)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.loanId }) |
+        @Html.ActionLink("Details", "Details", new { id = item.loanId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.loanId })
+    </td>
+</tr>
 }
 
 </table>
