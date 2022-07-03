@@ -38,7 +38,7 @@ namespace BL.UI.Repositories
 
             dbEntities.Logins.Remove(login);
             dbEntities.SaveChanges();
-
+    
             dbEntities.Users.Remove(user);
             dbEntities.SaveChanges();
         }

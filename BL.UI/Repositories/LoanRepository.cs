@@ -34,6 +34,10 @@ namespace BL.UI.Repositories
             dbEntities.Users.Remove(user);
             dbEntities.SaveChanges();
         }
+        public bool LoanStatus(LoanApplicant loanId)
+        {
+            User
+        }
        
 
     }

@@ -95,5 +95,22 @@ namespace BL.UI.Controllers
             loanRepository.deleteLoan(loanid);
             return RedirectToAction("getLoans");
         }
+        [HttpPut]
+        [Route("updateStatus")]
+        public string updateStatus(int id, Boolean val, Object obj)
+        {
+            LoanApplicant loanApplicant = loanRepository.LoanApplicant.Find(id);
+            if (val == true)
+            {
+                loanApplicant.TimestampofLoan = DateTime.Now.ToString("MMMM-dd-yyyy");
+            }
+            else
+            {
+                loanApplicant.TimestampofLoan = "0";
+            }
+            db.Entry(loanApplicant).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+            return "status updated";
+        }
     }
 }

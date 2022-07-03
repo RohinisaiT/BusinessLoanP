@@ -22,3 +22,14 @@ E:\Projects\vsrepos\BusinessLoan\BL.DataService\obj\Debug\BL.DataService.csproj.
 E:\Projects\vsrepos\BusinessLoan\BL.DataService\obj\Debug\BL.DataService.dll
 E:\Projects\vsrepos\BusinessLoan\BL.DataService\obj\Debug\BL.DataService.pdb
 E:\Projects\vsrepos\BusinessLoan\BL.DataService\obj\Debug\BL.DataService.csproj.AssemblyReference.cache
+D:\Project\BusinessLoanP\BL.DataService\bin\Debug\BL.DataService.dll.config
+D:\Project\BusinessLoanP\BL.DataService\bin\Debug\BL.DataService.dll
+D:\Project\BusinessLoanP\BL.DataService\bin\Debug\BL.DataService.pdb
+D:\Project\BusinessLoanP\BL.DataService\bin\Debug\EntityFramework.dll
+D:\Project\BusinessLoanP\BL.DataService\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project\BusinessLoanP\BL.DataService\bin\Debug\EntityFramework.xml
+D:\Project\BusinessLoanP\BL.DataService\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project\BusinessLoanP\BL.DataService\obj\Debug\BL.DataService.csproj.CoreCompileInputs.cache
+D:\Project\BusinessLoanP\BL.DataService\obj\Debug\BL.DataService.csproj.CopyComplete
+D:\Project\BusinessLoanP\BL.DataService\obj\Debug\BL.DataService.dll
+D:\Project\BusinessLoanP\BL.DataService\obj\Debug\BL.DataService.pdb
