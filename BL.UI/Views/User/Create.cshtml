@@ -50,7 +50,12 @@
         <div class="form-group">
             @Html.LabelFor(model => model.userRole, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.userRole, new { htmlAttributes = new { @class = "form-control" } })
+                @*@Html.EditorFor(model => model.userRole, new { htmlAttributes = new { @class = "form-control" } })*@
+                <select required name="selector" class="form-control form-select">
+                    <option selected disabled hidden>Admin/User</option>
+                    <option value="admin">Admin</option>
+                    <option value="user">User</option>
+                </select>
                 @Html.ValidationMessageFor(model => model.userRole, "", new { @class = "text-danger" })
             </div>
         </div>

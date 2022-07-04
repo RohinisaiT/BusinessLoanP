@@ -23,6 +23,7 @@
                     <li>@Html.ActionLink("Apply Loan", "addLoan", "Loan")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink(linkText: "Profile", actionName:"Details", controllerName:"User", routeValues: new { id = Session["userId"] }, htmlAttributes:null)</li>
+                    <li>@Html.ActionLink("Logout", "Logout", "User")</li>
                 </ul>
             </div>
         </div>

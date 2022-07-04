@@ -30,9 +30,13 @@ namespace BL.UI.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Create(User user)
+        public ActionResult Create(User user, string selector)
         {
+            user.userRole = selector;
+            Session["userType"] = selector;
+
             userRepository.addUser(user);
+
             Session["userId"] = user.UserId;
             return RedirectToAction("Index");
         }
@@ -82,5 +86,13 @@ namespace BL.UI.Controllers
         {
             return View();
         }
+
+        public ActionResult Logout()
+        {
+            Session.RemoveAll();
+
+            return RedirectToAction("Login");
+        }
+
     }
 }

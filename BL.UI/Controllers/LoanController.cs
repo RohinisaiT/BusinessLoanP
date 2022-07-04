@@ -56,12 +56,15 @@ namespace BL.UI.Controllers
             return View();
         }
 
-
         [HttpGet]
         public ActionResult getLoans()
         {
-            List<LoanApplicant> loans = loanRepository.viewLoan();
-            return View(loans);
+            if (Session["userId"] != null)
+            {
+                List<LoanApplicant> loans = loanRepository.viewLoan();
+                return View(loans);
+            }
+            return RedirectToRoute(new { controller = "User", action = "Login" });
         }
 
         [HttpGet]
